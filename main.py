@@ -1,9 +1,7 @@
 import os
 
 import interactions
-
-guild_id = os.getenv("GUILD_ID")
-token = os.getenv("TOKEN")
+from discord_oauth2_api import get_user_data
 
 bot = interactions.Client(
     token=token,
@@ -15,7 +13,6 @@ bot = interactions.Client(
     description="It will return 3rd party app connected to the users",
 )
 async def my_first_command(ctx: interactions.CommandContext):
-    user_json = get
-    await ctx.send(f"The user {ctx.user.username}")
+    await ctx.send(f"The user {ctx.user.email}")
 
 bot.start()
