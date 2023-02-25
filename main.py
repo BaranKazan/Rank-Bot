@@ -1,11 +1,10 @@
-import os
-
+from config import TOKEN, GUILD_ID
 import interactions
 from discord_oauth2_api import get_user_data
 
 bot = interactions.Client(
-    token=token,
-    default_scope=guild_id
+    token=TOKEN,
+    default_scope=GUILD_ID
 )
 
 @bot.command(
